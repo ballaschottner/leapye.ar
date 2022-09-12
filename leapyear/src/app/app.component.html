@@ -2,16 +2,35 @@
   <div class="title">
     <h1>LEAPYE.AR</h1>
   </div>
-  <div class="form-group form-container">
-    <label for="power"></label>
-    <input class="form-input" id="power" required />
-    <p class="form-input__hint">Hint: Type the year and hit enter</p>
-  </div>
+  <form
+    class="form-group form-container"
+    (keydown.enter)="onCheckYear(leapYearInput)"
+    #leapYearInput="ngForm"
+  >
+    <label for="leapyear"></label>
+    <input
+      type="text"
+      class="form-input"
+      id="leapyear"
+      required
+      placeholder="Type the year and hit enter"
+      maxlength="16"
+      ngModel
+      name="leapyear"
+    />
+    <div class="leapyear__result" *ngIf="resultMessage">
+      {{ resultMessage }}
+    </div>
+  </form>
   <div class="project-info">
     <ul class="project-info__menu-items">
       <li class="project-info__menu-link">About this project</li>
       <li class="project-info__menu-link">About me</li>
-      <li class="project-info__menu-link">Check my .dev site</li>
+      <li class="project-info__menu-link">
+        <a href="http://ballaschottner.dev" target="_blank"
+          >Check my .dev site</a
+        >
+      </li>
     </ul>
   </div>
 </div>
