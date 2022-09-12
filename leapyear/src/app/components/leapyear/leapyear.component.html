@@ -1,0 +1,23 @@
+<div class="title">
+  <h1>LEAPYE.AR</h1>
+</div>
+<form
+  class="form-group form-container"
+  (keydown.enter)="onCheckYear(leapYearInput)"
+  #leapYearInput="ngForm"
+>
+  <label for="leapyear"></label>
+  <input
+    type="text"
+    class="form-input"
+    id="leapyear"
+    required
+    placeholder="Type the year and hit enter"
+    maxlength="16"
+    ngModel
+    name="leapyear"
+  />
+  <div class="leapyear__result" *ngIf="resultMessage">
+    {{ resultMessage }}
+  </div>
+</form>
