@@ -1,0 +1,21 @@
+.about-this {
+  max-width: 420px;
+}
+
+.about-this__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-this__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.about-this__text {
+  font-size: 2rem;
+  font-weight: 200;
+  text-align: justify;
+}
